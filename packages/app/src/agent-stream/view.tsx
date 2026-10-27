@@ -1206,6 +1206,7 @@ const AgentStreamViewComponent = forwardRef<AgentStreamViewHandle, AgentStreamVi
           <AssistantSelectionCopySurface style={stylesheet.container}>
             <MessageOuterSpacingProvider disableOuterSpacing>
               {streamRenderStrategy.render({
+                readingRowReplacements: presentation.readingRowReplacements,
                 agentId,
                 segments: renderModel.segments,
                 historyRowRevision,
@@ -1898,12 +1899,11 @@ function StreamItemWrapper({ gapBelow, turnIndent, children }: StreamItemWrapper
   const gapStyle = useMemo(() => ({ paddingBottom: gapBelow }), [gapBelow]);
   switch (turnIndent) {
     case "none":
-      return <View style={wrapperStyle}>{children}</View>;
     case "openedHost":
       return (
         <View style={wrapperStyle}>
           {children}
-          <IndentRail style={gapStyle} />
+          {turnIndent === "openedHost" ? <IndentRail style={gapStyle} /> : null}
         </View>
       );
     case "nested":
