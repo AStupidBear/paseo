@@ -2870,6 +2870,14 @@ export const en = {
       },
       agents: {
         unavailable: "Connect to this host to manage agents",
+        resumeOnStartup: {
+          title: "Resume agents after restart",
+          info: "Reopen agents that were working when the host stopped and send the resume prompt. Applies after graceful restarts and crashes.",
+          hint: "Continue interrupted work automatically.",
+          prompt: "Resume prompt",
+          edit: "Edit",
+          editAccessibilityLabel: "Edit prompt",
+        },
         idleRuntimeCleanup: {
           title: "Release idle agents",
           hint: "Free up memory after an hour of inactivity.",

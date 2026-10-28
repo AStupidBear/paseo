@@ -2767,6 +2767,14 @@ export const ja: TranslationResources = {
       },
       agents: {
         unavailable: "エージェントを管理するにはこのホストに接続してください",
+        resumeOnStartup: {
+          title: "再起動後にエージェントを再開",
+          info: "ホストの停止時に作業中だったエージェントを開き直し、再開メッセージを送信します。通常の再起動とクラッシュの両方に適用されます。",
+          hint: "中断された作業を自動的に続行します。",
+          prompt: "再開メッセージ",
+          edit: "編集",
+          editAccessibilityLabel: "メッセージを編集",
+        },
         idleRuntimeCleanup: {
           title: "アイドル状態のエージェントを解放",
           hint: "1 時間のアイドル状態の後にメモリを解放します。",
